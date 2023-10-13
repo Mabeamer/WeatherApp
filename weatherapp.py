@@ -72,7 +72,8 @@ def apiCalls(apiInput):
         print("err, please check your spelling.")
     else:
         print(userSearch)
-        request = "https://api.openweathermap.org/data/2.5/forecast?lat=" + userSearch[0] +"&lon="+userSearch[1]+"&appid="
+        apiKey = ""
+        request = "https://api.openweathermap.org/data/2.5/forecast?lat=" + userSearch[0] +"&lon="+userSearch[1]+"&appid=" + apiKey
         #print(request)
         response = requests.get(request)
         #to check status code
