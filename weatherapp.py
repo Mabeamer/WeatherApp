@@ -10,8 +10,6 @@ import sys
 number = input('Enter number to find\n')
 #reading from csv file
 def search():
-    #instead of searching for the state, search city and decide from there.
-    #change the row to check for the cities
     cityInput = input("City name? (Capital required): ")
     stateInput = input("Please type in the city of the state? (Capital required): ")
     reader = csv.reader(open('us-area-code-cities.csv', encoding="utf8"))
@@ -30,7 +28,6 @@ def search():
                 latlong.append(row[4])
                 latlong.append(row[5])
                 return latlong
-            #!!!!THIS DOES NOT NEED TO BE INSIDE OF THE LOOP!!!! BRING OUTSIDE TO MAKE THIS CHECK PROPER
     if not latlong: 
         print("(user input) does not exist please check spelling of city name")
         return "Error"
