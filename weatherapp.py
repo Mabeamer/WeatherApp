@@ -7,7 +7,7 @@ import sys
 #--changes will be made to search() to fit geocoding method.--
 
 #input number you want to search
-number = input('Enter number to find\n')
+#number = input('Enter number to find\n')
 #reading from csv file
 def search():
     cityInput = input("City name? (Capital required): ")
@@ -72,7 +72,8 @@ def apiCalls(apiInput):
         print("err, please check your spelling.")
     else:
         print(userSearch)
-        apiKey = ""
+        #api key needs to be moved to a different file
+        apiKey = "bf018388fe3e036c7bc8292eb46ac00c"
         request = "https://api.openweathermap.org/data/2.5/forecast?lat=" + userSearch[0] +"&lon="+userSearch[1]+"&appid=" + apiKey
         #print(request)
         response = requests.get(request)
