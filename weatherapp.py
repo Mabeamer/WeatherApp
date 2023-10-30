@@ -73,7 +73,7 @@ def apiCalls(apiInput):
     else:
         print(userSearch)
         #api key needs to be moved to a different file
-        apiKey = "bf018388fe3e036c7bc8292eb46ac00c"
+        apiKey = ""
         request = "https://api.openweathermap.org/data/2.5/forecast?lat=" + userSearch[0] +"&lon="+userSearch[1]+"&appid=" + apiKey
         #print(request)
         response = requests.get(request)
